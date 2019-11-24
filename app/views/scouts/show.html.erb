@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @scout.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @scout.title %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scout.name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @scout.body %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @scout.update_at %>
+</p>
+
+<%= link_to 'Edit', edit_scout_path(@scout) %> |
+<%= link_to 'Back', scouts_path %>

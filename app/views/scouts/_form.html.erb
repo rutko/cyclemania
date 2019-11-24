@@ -1,0 +1,42 @@
+<%= form_with(model: scout, local: true) do |form| %>
+  <% if scout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scout.errors.count, "error") %> prohibited this scout from being saved:</h2>
+
+      <ul>
+        <% scout.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_field :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :update_at %>
+    <%= form.time_select :update_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
