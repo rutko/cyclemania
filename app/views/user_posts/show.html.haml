@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Id:
+  = @user_post.id
+%p
+  %strong Name:
+  = @user_post.name
+%p
+  %strong Title:
+  = @user_post.title
+%p
+  %strong Body:
+  = @user_post.body
+%p
+  %strong Update at:
+  = @user_post.update_at
+= link_to 'Edit', edit_user_post_path(@user_post)
+|
+= link_to 'Back', user_posts_path

@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Id:
+  = @scout.id
+%p
+  %strong Title:
+  = @scout.title
+%p
+  %strong Name:
+  = @scout.name
+%p
+  %strong Body:
+  = @scout.body
+%p
+  %strong Update at:
+  = @scout.update_at
+= link_to 'Edit', edit_scout_path(@scout)
+|
+= link_to 'Back', scouts_path
