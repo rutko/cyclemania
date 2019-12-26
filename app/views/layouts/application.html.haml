@@ -6,7 +6,12 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     %title
-      = t('title')
+      = t('title_with_furigana')
     %body
       %header
       = t('title')
+      %ul
+        %li= link_to('HOME', root_path)
+        %li= link_to('NEWS', posts_path)
+        %li= link_to('CONTACT')
+        %li= link_to('ABOUT')
