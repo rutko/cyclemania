@@ -1,0 +1,10 @@
+= form_for @contact do |f|
+  .form-group
+    = f.label :email, '返信先メールアドレス'
+    = f.text_field :email, class: 'form-control'
+
+  .form-group
+    = f.label :message, 'お問い合わせ内容'
+    = f.text_area :message, size: '10x10', class: 'form-control'
+
+  = f.submit '送信'

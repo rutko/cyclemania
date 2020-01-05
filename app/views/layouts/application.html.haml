@@ -13,8 +13,10 @@
       %ul
         %li= link_to('HOME', root_path)
         %li= link_to('NEWS', posts_path)
-        %li= link_to('CONTACT')
+        %li= link_to('CONTACT', new_contact_path)
         %li= link_to('ABOUT')
+
+      = yield
       %footer
         %small.copyright
         Copyright &copy;
