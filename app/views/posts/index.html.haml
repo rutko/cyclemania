@@ -1,20 +1,18 @@
-%p#notice= notice
-%h1 Posts
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th Published
-      %th{:colspan => "3"}
-  %tbody
-    - @posts.each do |post|
+.content_inner
+  %h1 MEMBER募集
+  %table.table.table-striped.table-bordered
+    %thead
       %tr
-        %td= post.title
-        %td= post.body
-        %td= post.published
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Post', new_post_path
+        %th タイトル
+        %th 内容
+        %th{:colspan => "3"}
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %td= post.title
+          %td= post.body
+          %td= link_to '詳細', post
+          %td= link_to '編集', edit_post_path(post)
+          %td= link_to '削除', post, method: :delete, data: { confirm: '削除しますか？' }
+  %br/
+  = link_to '新規投稿', new_post_path

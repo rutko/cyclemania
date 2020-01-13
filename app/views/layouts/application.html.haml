@@ -18,14 +18,14 @@
           %li.nav-item
             = link_to('HOME', root_path)
           %li.nav-item
-            = link_to('NEWS', posts_path)
+            = link_to('MEMBER', posts_path)
           %li.nav-item
             = link_to('CONTACT', new_contact_path)
           %li.nav-item
             = link_to('ABOUT')
     .contents
       = yield
-      %footer
+      %footer.fixed-bottom
         %small.copyright
         Copyright &copy;
         = succeed "." do
