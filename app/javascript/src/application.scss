@@ -23,3 +23,18 @@ footer {
 	padding-bottom: 10px;
 	padding-left: 10px;
 }
+
+nav {
+	list-style: none;
+	overflow: hidden;
+}
+
+nav li{
+	width: 140px;
+  text-align: center;
+  background-color: rgb(161, 159, 159);
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 5px;
+}
