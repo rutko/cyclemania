@@ -1,5 +1,6 @@
 .content_inner
-  %h1 MEMBER募集
+  %h1 メンバー募集一覧
+  %p 共に走るメンバーを探そう
   %table.table.table-striped.table-bordered
     %thead
       %tr
@@ -14,5 +15,6 @@
           %td= link_to '詳細', post
           %td= link_to '編集', edit_post_path(post)
           %td= link_to '削除', post, method: :delete, data: { confirm: '削除しますか？' }
-  %br/
-  = link_to '新規投稿', new_post_path
+  %br
+    %button.button.btn.btn-outline-secondary
+      = link_to '募集する', new_post_path
