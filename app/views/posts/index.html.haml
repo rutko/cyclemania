@@ -1,6 +1,9 @@
 .content_inner
   %h1 メンバー募集一覧
   %p 共に走るメンバーを探そう
+  %br
+  %button.button.btn.btn-outline-secondary.mx-auto.d-block
+    = link_to '募集する', new_post_path
 
   %column-listing
     - @posts.each do |post|
@@ -12,6 +15,7 @@
           %a.card-link{:href => "#"} 詳細
           %a.card-link{:href => "#"} 編集
           %a.card-link{:href => "#"} 削除
+
 
 
   -# %table.table.table-striped.table-bordered
@@ -28,6 +32,4 @@
   -#         %td= link_to '詳細', post
   -#         %td= link_to '編集', edit_post_path(post)
   -#         %td= link_to '削除', post, method: :delete, data: { confirm: '削除しますか？' }
-  -# %br
-  -#   %button.button.btn.btn-outline-secondary
-  -#     = link_to '募集する', new_post_path
+
