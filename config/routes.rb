@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   resources :scouts
 
   resources :contacts, only: [:new, :create]
+
+  #SubPages
+  get 'about', to:'sub_pages#about'
 end
