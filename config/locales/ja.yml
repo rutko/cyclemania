@@ -2,3 +2,8 @@
 ja:
   title: 'CYCLEMANIA'
   title_with_furigana: 'CYCLEMANIA(サイクルマニア)'
+  time:
+    formats:
+      default: ! '%Y/%m/%d'
+      long: ! '%Y年%m月%d日(%a) %H時%M分%S秒 %z'
+      short: ! '%Y年%m月%d日 %H:%M'
