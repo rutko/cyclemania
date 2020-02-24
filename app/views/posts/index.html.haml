@@ -1,35 +1,18 @@
 .content_inner
   %h1 メンバー募集一覧
   %p 共に走るメンバーを探そう
-  %br
-  %button.button.btn.btn-outline-secondary.mx-auto.d-block
-    = link_to '募集する', new_post_path
-
-  %column-listing
-    - @posts.each do |post|
-      .card{:style => "width: 18rem;"}
-        .card-body
-          %h5.card-title= post.title
-          %h6.card-subtitle.mb-2.text-muted subtitle
-          %p.card-text= post.body
-          %a.card-link{:href => "#"} 詳細
-          %a.card-link{:href => "#"} 編集
-          %a.card-link{:href => "#"} 削除
-
-
-
-  -# %table.table.table-striped.table-bordered
-  -#   %thead
-  -#     %tr
-  -#       %th タイトル
-  -#       %th 内容
-  -#       %th{:colspan => "3"}
-  -#   %tbody
-  -#     - @posts.each do |post|
-  -#       %tr
-  -#         %td= post.title
-  -#         %td= post.body
-  -#         %td= link_to '詳細', post
-  -#         %td= link_to '編集', edit_post_path(post)
-  -#         %td= link_to '削除', post, method: :delete, data: { confirm: '削除しますか？' }
-
+  .new_post
+    = link_to(new_post_path, class: 'button-container') do
+      %button.btn.btn-outline-secondary.mx-auto.d-block 募集する
+  .row.mb-2
+    .col-md-4
+      %column-listing
+        - @posts.each do |post|
+          .card.flex-md-row.mb-4.box-shadow.h-md-250
+            .card-body
+              %h5.card-titler= post.title
+              %p.card-text= post.body
+              %p.created_at= post.created_at
+              %a.card-link{:href => "#"} 詳細
+              %a.card-link{:href => "#"} 編集
+              %a.card-link{:href => "#"} 削除
